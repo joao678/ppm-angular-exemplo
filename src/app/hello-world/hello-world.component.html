@@ -1,3 +1,12 @@
-<p>
-    Hello World, {{nome}}
-</p>
+<section>
+    <p *ngIf="nome">
+        Hello World, {{nome}}
+    </p>
+    
+    <p *ngIf="!nome">
+        Digite seu nome
+    </p>
+    <p>
+        <input type="text" placeholder="Informe o nome" [(ngModel)]="nome">
+    </p>
+</section>
